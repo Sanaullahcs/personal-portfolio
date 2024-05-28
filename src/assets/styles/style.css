@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden; /* Remove vertical scrollbar */
+    font-family: Arial, sans-serif;
+  }
+    
+    #app {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .scroll-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    .scroll-button.left {
+      left: 10px;
+    }
+    
+    .scroll-button.right {
+      right: 10px;
+    }
+    
+    .menu-icon {
+      position: fixed;
+      left: 10px;
+      z-index: 1000;
+      font-size: 24px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    .horizontal-scroll-container {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    border: 1px solid red;
+  }
+  .horizontal-scroll-content {
+    white-space: nowrap;
+  }
+  
+  .item {
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 100vh; /* Center text vertically */
+    font-size: 24px;
+  }
+    
+    .horizontal-scroll-container::-webkit-scrollbar {
+      display: none;  
+    }
+    
+    .horizontal-scroll-content {
+      display: inline-block;
+      white-space: nowrap;
+      height: 100%;
+    }
+    .background-color{
+      background-color: black;
+    }
+    .vertical-heading {
+      transform: rotate(-90deg);
+      position: absolute;
+      top: 20%;
+      
+      width: fit-content;
+      white-space: nowrap;
+    }
+    .vertical-heading span {
+      display: inline-block;
+      color: #ad0e0e; /* Adjust as needed */
+      font-weight: bold; /* Adjust as needed */
+    }  
