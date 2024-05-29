@@ -1,29 +1,38 @@
 <template>
-    
-     <div class="background-color">
-        <v-row>
-            <v-col cols="1">
-                <v-img src="@/assets/icons/nav-icon.png" width="30" height="21" ></v-img>
-<div class="vertical-heading">
-          <span>Your Vertical Heading</span>
+  <div class="background-color">
+    <v-row>
+      <v-col cols="1">
+        <div class="ml-10 mt-10">
+          <v-img 
+            src="@/assets/icons/nav-icon.png" 
+            width="30" 
+            height="21" 
+            @click="toggleDrawer"
+            class="menu-icon"
+          ></v-img>
         </div>
-            </v-col>
-            <v-col cols="11">
-                <div class="horizontal-scroll-container" ref="scrollContainer" @wheel.prevent="onWheel">
-      <div class="horizontal-scroll-content">
-        <div class="item" v-for="item in items" :key="item.id">{{ item.content }}</div>
-      </div>
-    </div>
-            </v-col>
-        </v-row>
-     </div>
-      
-  
-    
-  </template>
-  
-  <script>
+        <div class="label">
+          <span class="label-text">Online Portfolio Umair</span>
+          <span class="label-text-two">© 2024</span>
+        </div>
+      </v-col>
+      <v-col cols="11">
+        <HorizontalScroll :items="items" />
+      </v-col>
+    </v-row>
+    <NavigationDrawer :visible="drawerVisible" @close="drawerVisible = false" />
+  </div>
+</template>
+
+<script>
+import HorizontalScroll from '@/components/MainLayout/HorizontalScroll.vue';
+import NavigationDrawer from '@/components/MainLayout/NavigationDrawer.vue';
+
 export default {
+  components: {
+    HorizontalScroll,
+    NavigationDrawer
+  },
   data() {
     return {
       items: [
@@ -32,34 +41,17 @@ export default {
         { id: 3, content: 'Content 3' },
         // Add more items as needed
       ],
-      menuTop: 10 // Initial top position of the menu icon
-    }
+      drawerVisible: false
+    };
   },
   methods: {
-    scrollLeft() {
-      this.$refs.scrollContainer.scrollBy({
-        left: -window.innerWidth,
-        behavior: 'smooth'
-      });
-    },
-    scrollRight() {
-      this.$refs.scrollContainer.scrollBy({
-        left: window.innerWidth,
-        behavior: 'smooth'
-      });
-    },
-    onWheel(event) {
-  event.preventDefault();
-  const scrollContainer = this.$refs.scrollContainer;
-  const scrollAmount = event.deltaY * 2; // Adjust the multiplier for desired speed
-  scrollContainer.scrollLeft += scrollAmount;
-}
-
-  },
-}
+    toggleDrawer() {
+      this.drawerVisible = !this.drawerVisible;
+    }
+  }
+};
 </script>
-  <style>
-  @import "@/assets/styles/style.css";
 
-  </style>
-  
+<style>
+@import "@/assets/styles/style.css";
+</style>
