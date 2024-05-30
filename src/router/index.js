@@ -1,31 +1,71 @@
-// router/index.js
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+
 const routes = [
-
-
-  //****************************************************************** //
-  //                 //   landing pages
-  //****************************************************************** //
-  {
+  { 
     path: '/',
-    name: 'MainLayout',
-    component: () => import(/* webpackChunkName: "about" */ '@/components/MainLayout/HomePage.vue'),
-    
+    name: 'Home',
+    component: () => import('@/components/MainLayout/HomePage.vue')
   },
+  // { path: '/about', component: About },
+  { 
+    path: '/projects',
+    name: 'Projects',
+    component: () => import('@/views/ProjectsMainView/ProjectsView.vue'),
+    children: [
+      { 
+        path: 'UIUX',
+        name: 'UIUX',
+        component: () => import('@/views/ProjectsMainView/uiuxViews.vue/UiuxMainView.vue'),
+        // children: [
+        //   { path: 'child1', component: UIUXChild1 },
+        //   { path: 'child2', component: UIUXChild2 }
+        // ]
+      },
+      { 
+        path: 'websites',
+        name: 'Websites',
+        component: () => import('@/views/ProjectsMainView/WebsitesView.vue/WebsiteMainView.vue'),
+        // children: [
+        //   { path: 'child1', component: UIUXChild1 },
+        //   { path: 'child2', component: UIUXChild2 }
+        // ]
+      },
+      { 
+        path: 'Mobile_app',
+        name: 'MobileApp',
+        component: () => import('@/views/ProjectsMainView/MobileAppView/MobileMainApp.vue'),
+        // children: [
+        //   { path: 'child1', component: AppChild1 },
+        //   { path: 'child2', component: AppChild2 }
+        // ]
+      },
+      { 
+        path: 'software',
+        name: 'Software',
+        component: () => import('@/views/ProjectsMainView/SoftwaresMainView/SoftwareView.vue'),
+        // children: [
+        //   { path: 'child1', component: SoftwareChild1 },
+        //   { path: 'child2', component: SoftwareChild2 }
+        // ]
+      }
+    ]
+  },
+  { 
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('@/views/ContactMainView.vue/ContactView.vue')
+  },
+  { 
+    path: '/about',
+    name: 'about',
+    component: () => import('@/components/AboutPages/AboutPage.vue')
+  }
+];
 
-
-]
 
 const router = createRouter({
   history: createWebHistory(),
   routes
-})
+});
 
-// router.beforeEach((to, from, next) => {
-//   // Update dynamic text based on route
-//   const dynamicText = to.name === 'resumebuilder' ? 'Resume Wizard' : to.name === 'jobagent' ? 'Not OK' :  to.name === 'jobagent' ? 'Job Agent' : to.name === 'competitor' ? 'Competitor' :  to.name === 'competitor' ? 'Competitor' :  to.name === 'competitor' ? 'AI Interviewer' : '';
-//   document.getElementById('dynamicText').innerText = dynamicText;
-//   next()
-// })
-
-export default router
+export default router;
