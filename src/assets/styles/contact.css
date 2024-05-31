@@ -1,0 +1,116 @@
+.responsive-image-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: -75px;
+  }
+  
+  .responsive-image {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  @media (max-width: 600px) {
+    .responsive-image-container {
+      padding-top: 100%; /* Adjust aspect ratio for smaller screens if needed */
+    }
+  }
+  .submit-button {
+    position: relative;
+    width: 130px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .circle-text {
+    left: 0;
+    width: 45px;
+    height: 45px;
+    line-height: 56px;
+    border-radius: 50%;
+    background-color: #F8760B;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Tai Heritage Pro", serif ;
+    position: absolute;
+    
+  
+  }
+  
+  .outside-text {
+    right: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: "Tai Heritage Pro", serif ;
+    font-weight: 400;
+  }
+ 
+.responsive-image-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%; /* This creates a 4:3 aspect ratio container */
+  }
+  
+  .responsive-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 600px) {
+    .responsive-image-container {
+      padding-top: 100%; /* Adjust aspect ratio for smaller screens if needed */
+    }
+  }.submit-button {
+    position: relative;
+    width: 130px; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .circle-text {
+    left: 0;
+    width: 45px;
+    height: 45px;
+    line-height: 56px;
+    border-radius: 50%;
+    background-color: #F8760B;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Tai Heritage Pro", serif ;
+    position: absolute;
+    
+  
+  }
+  
+  .outside-text {
+    right: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    font-family: "Tai Heritage Pro", serif ;
+    font-weight: 400;
+  }
+  .contact-text{
+    color:#F8760B;
+    
+    font-family: "Tai Heritage Pro", serif ;
+    font-size: 70px;
+    font-weight: 700;
+
+  }

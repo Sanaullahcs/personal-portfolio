@@ -1,5 +1,5 @@
 <template>
-<div class="navigation-drawer" v-if="visible">
+<div class="navigation-drawer" v-if="visible" >
     <div class="mt-10">
       <v-img src="@/assets/icons/close.png" width="24" height="24" @click="closeDrawer" class="close-icon"></v-img>
     <p class="text-center mt-3 drawer-heading">Online Portfolio Umair</p>
@@ -59,4 +59,5 @@ export default {
 
 <style>
 @import "@/assets/styles/style.css";
+
 </style>
