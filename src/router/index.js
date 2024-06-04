@@ -6,6 +6,11 @@ const routes = [
     name: 'Home',
     component: () => import('@/components/MainLayout/HomePage.vue')
   },
+  { 
+    path: '/ageWiser',
+    name: 'ageWiser',
+    component: () => import('@/components/Projects/agewiser/agewiserWebsite.vue')
+  },
   // { path: '/about', component: About },
   { 
     path: '/projects',
@@ -18,7 +23,7 @@ const routes = [
         component: () => import('@/views/ProjectsMainView/uiuxViews.vue/UiuxMainView.vue'),
         // children: [
         //   { path: 'child1', component: UIUXChild1 },
-        //   { path: 'child2', component: UIUXChild2 }
+        //   { path: 'child2', component: UIUXChild2 } 
         // ]
       },
       { 

@@ -174,7 +174,7 @@ body, html {
 }
 .switch-container {
   width: 25px;
-  height: 37px;
+  height: 42px;
   border: 2px solid white;
   border-radius: 20px;
   position: relative;
@@ -218,7 +218,7 @@ body, html {
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color: black;
+    background-color: #F8760B;
     border-radius: 3rem;
   }
   

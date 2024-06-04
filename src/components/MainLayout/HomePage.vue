@@ -1,162 +1,131 @@
 <template>
-<div id="app">
     <v-container fluid class="pa-0 ma-0">
-        <v-row no-gutters>
-            <v-col cols="1">
-                <ToolBar />
-            </v-col>
-            <v-col cols="9">
-                <div ref="scrollingWrapper" class="scrolling-wrapper">
-                    <div class="card">
-                        <VisionToExcellence />
-                    </div>
-                    <div v-if="isHorizontalScrolling" class="card">
-                        <ContactView />
-                    </div>
-                </div>
-            </v-col>
-        </v-row>
+      <v-row no-gutters>
+        <v-col cols="12">
+          <div ref="scrollingWrapper" class="scrolling-wrapper">
+            <div class="card">
+              <VisionToExcellence />
+            </div>
+            <div v-if="isHorizontalScrolling" class="card">
+              <ContactView />
+            </div>
+            <div v-if="isHorizontalScrolling" class="card">
+              <AboutPage />
+              
+            </div>
+            <div v-if="isHorizontalScrolling" class="card">
+              <MyProjects />
+              
+            </div>
+          </div>
+        </v-col>
+      </v-row>
     </v-container>
-</div>
-</template>
+  </template>
+  
+  <script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import VisionToExcellence from './VisionToExcellence.vue';
+  import ContactView from '@/views/ContactMainView.vue/ContactView.vue';
+  import AboutPage from '../AboutPages/AboutPage.vue';
+import MyProjects from '../Projects/MyProjects.vue';
+gsap.registerPlugin(ScrollTrigger);
 
-<script>
-import ToolBar from './ToolBar.vue';
-import VisionToExcellence from './VisionToExcellence.vue';
-import ContactView from '@/views/ContactMainView.vue/ContactView.vue';
-
-export default {
+  
+  export default {
     components: {
-        VisionToExcellence,
-        ToolBar,
-        ContactView,
+      VisionToExcellence,
+      ContactView,
+      AboutPage,
+      MyProjects,
     },
     data() {
-        return {
-            drawerVisible: false,
-            isHorizontalScrolling: true,
-        };
+      return {
+        drawerVisible: false,
+        isHorizontalScrolling: true,
+      };
     },
     methods: {
-        toggleDrawer() {
-            this.drawerVisible = !this.drawerVisible;
-        },
-        handleScroll(event) {
-            if (this.isHorizontalScrolling && event.deltaY !== 0) {
-                const scrollSpeedFactor = 8;
-                this.$refs.scrollingWrapper.scrollLeft += event.deltaY * scrollSpeedFactor;
-                event.preventDefault();
-            }
-        },
-
-        handleResize() {
-            this.isHorizontalScrolling = window.innerWidth > 1000;
-        },
+      toggleDrawer() {
+        this.drawerVisible = !this.drawerVisible;
+      },
+      initializeScrollAnimation() {
+        const sections = this.$refs.scrollingWrapper.children;
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1),
+          ease: "none",
+          scrollTrigger: {
+            trigger: this.$refs.scrollingWrapper,
+            pin: true,
+            scrub: 3, // Increase this value for slower scrolling
+            snap: 1 / (sections.length - 1),
+            end: "+=1000", // Increase this value for slower scrolling
+          }
+        });
+      },
+      handleResize() {
+        this.isHorizontalScrolling = window.innerWidth > 1000;
+      },
     },
     mounted() {
-        this.$refs.scrollingWrapper.addEventListener('wheel', this.handleScroll);
-        window.addEventListener('resize', this.handleResize);
-        // Initial check for viewport width
-        this.handleResize();
+      this.initializeScrollAnimation();
+      window.addEventListener('resize', this.handleResize);
+      this.handleResize();
     },
     beforeUnmount() {
-        this.$refs.scrollingWrapper.removeEventListener('wheel', this.handleScroll);
-        window.removeEventListener('resize', this.handleResize);
+      window.removeEventListener('resize', this.handleResize);
+      ScrollTrigger.kill(); // Cleanup ScrollTrigger
     },
-};
-</script>
-
-<style>
-@import "@/assets/styles/style.css";
-
-html,
-body,
-#app {
+  };
+  </script>
+  
+  <style>
+  @import "@/assets/styles/style.css";
+  
+  html,
+  body,
+  #app {
     height: 100%;
     margin: 0;
-}
-
-.scrolling-wrapper {
-    overflow-x: auto;
-    overflow-y: hidden;
+  }
+  
+  .scrolling-wrapper {
+    overflow-x: hidden;
     white-space: nowrap;
     height: 100vh;
-    scroll-behavior: smooth;
-
-    scrollbar-width: none;
-}
-
-.scrolling-wrapper::-webkit-scrollbar {
-    display: none;
-    /* For Chrome, Safari, and Opera */
-}
-
-.scrolling-wrapper .card {
-    display: inline-block;
     width: 100vw;
-    transition: transform 10s ease;
-    /* Faster transition */
-    animation: slideIn 2s ease forwards;
-    transform: translateZ(0)
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.scrolling-wrapper {
-    overflow-x: auto;
-    /* Enable horizontal scrolling */
-    overflow-y: hidden;
-    /* Disable vertical scrolling */
-    white-space: nowrap;
-    height: 100vh;
-    /* Full viewport height */
+    scroll-behavior: smooth;
     scrollbar-width: none;
-    /* For Firefox */
-}
-
-.scrolling-wrapper::-webkit-scrollbar {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .scrolling-wrapper::-webkit-scrollbar {
     display: none;
-    /* For Chrome, Safari, and Opera */
-}
-
-.scrolling-wrapper .card {
-    display: inline-block;
-    width: 78vw;
-    /* Full viewport width */
-    height: 100%;
-    /* Full viewport height */
-}
-
-@media (max-width: 1000px) {
+  }
+  
+  .scrolling-wrapper .card {
+    flex: 0 0 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @media (max-width: 1000px) {
     .scrolling-wrapper {
-        overflow-x: hidden;
-        overflow-y: auto;
-        white-space: normal;
-        height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      white-space: normal;
+      height: 100vh;
+      width: 100vw;
     }
-
+  
     .scrolling-wrapper .card {
-        display: block;
-        width: 100%;
-        height: 100%;
+      display: block;
+      width: 100%;
+      height: 100vh;
     }
-    .scrolling-wrapper .card {
-    display: inline-block;
-    width: 90vw;
-    /* Full viewport width */
-    height: 100%;
-    /* Full viewport height */
-}
-    
-}
-</style>
+  }
+  </style>
+  

@@ -1,10 +1,11 @@
 <template>
-<v-container>
+<div class="contact-page mt-16">
+    <v-container >
     <v-row>
-        <v-col cols="12" md="6">
+        <v-col cols="11" md="6">
             <v-container>
                 <p class="contact-text ml-10">Contact</p>
-
+                
             </v-container>
             <div class="responsive-image-container">
                 <v-img src="@/assets/images/contactUs.png" height="534" width="557" class="responsive-image"></v-img>
@@ -38,11 +39,30 @@
                 </v-col>
             </v-row>
         </v-col>
+        <v-col>
+            <div class="social-accounts-two d-flex">
+        <div class="d-flex">
+            <a href="#" class="linkedin">LinkedIn</a>
+            <span class="mdi mdi-arrow-top-right ml-2"></span>
+
+        </div>
+        <div class="d-flex ml-8">
+          <a href="#"  class="email">Email</a>
+            <span class="mdi mdi-arrow-top-right ml-2"></span>
+
+        </div>
+        <div class="d-flex ml-8">
+          <a href="#"  class="whatsapp">Whatsapp</a>
+            <span class="mdi mdi-arrow-top-right ml-2"></span>
+
+        </div>
+    </div>
+        </v-col>
     </v-row>
-</v-container>
-<v-container>
 
 </v-container>
+</div>
+
 </template>
 
 <script>
@@ -52,6 +72,7 @@ export default {
 </script>
 
 <style scoped>
+@import "@/assets/styles/style.css";
 @import "@/assets/styles/contact.css";
 </style><style>
 .custom-underline .v-label {
@@ -91,4 +112,7 @@ export default {
 .custom-underline .v-field--active input {
     color: white;
 }
+.v-row{
+    flex: none !important;
+   }
 </style>

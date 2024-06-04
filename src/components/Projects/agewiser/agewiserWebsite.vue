@@ -1,0 +1,90 @@
+<template>
+<div class="contact-page mt-16">
+    <v-container>
+        <v-row>
+            <v-col cols="12">
+                <p class="ageWiser-text ml-16">AgeWiser</p>
+
+            </v-col>
+        </v-row>
+<v-row>
+    
+</v-row>
+    </v-container>
+
+</div>
+</template>
+
+    
+<script>
+export default {
+    name: 'HorizontalScroll',
+    data() {
+        return {
+            isOn: false,
+            toggleInterval: null,
+        };
+    },
+    mounted() {
+        this.startAutoToggle();
+    },
+    beforeUnmount() {
+        this.stopAutoToggle();
+    },
+    methods: {
+        startAutoToggle() {
+            this.toggleInterval = setInterval(() => {
+                this.isOn = !this.isOn;
+            }, 2000); // Change state every 2 seconds (adjust as needed)
+        },
+        stopAutoToggle() {
+            clearInterval(this.toggleInterval);
+        },
+        toggle() {
+            this.isOn = !this.isOn;
+        },
+    },
+};
+</script>
+
+    <style scoped>
+    @import "@/assets/styles/ageWiser.css";
+    .switch-container-projects {
+  position: absolute;
+  left: 25%;
+
+}
+.switch-container {
+  width: 25px;
+  height: 42px;
+  border: 2px solid white;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 90%;
+}
+
+.switch-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  transition: top 1s ease; /* Slow and smooth transition */
+}
+
+.switch-dot-on {
+  top: 18px;
+}
+
+.creative-text-four{
+  font-family: "Tai Heritage Pro", serif ;
+  color: #ffffffa0;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+    </style >
