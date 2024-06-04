@@ -9,7 +9,7 @@ const routes = [
   { 
     path: '/ageWiser',
     name: 'ageWiser',
-    component: () => import('@/components/Projects/agewiser/agewiserWebsite.vue')
+    component: () => import('@/components/Projects/TSOB/TSOB.vue')
   },
   // { path: '/about', component: About },
   { 

@@ -3,7 +3,7 @@
     <v-container>
         <v-row>
             <v-col cols="12">
-                <p class="ageWiser-text ml-16">AgeWiser</p>
+                <p class="chronos-text ml-16">Chronos</p>
 
             </v-col>
         </v-row>
@@ -11,14 +11,14 @@
             <v-row>
                 <v-col cols="12" md="6">
                     <div class="responsive-image-container">
-                <v-img src="@/assets/images/AgewiserWebsite.png" height="534" width="557" class="responsive-image"></v-img>
-            </div>
+                        <v-img src="@/assets/images/chronosweb.png" height="534" width="557" class="responsive-image"></v-img>
+                    </div>
                 </v-col>
                 <v-col cols="12" md="6" class="projects-content">
-                        
-                    <p class="mt-14">AgeWiser is a holistic AI-driven senior care app.<br> Upon first use, it assesses users across<br> Mobility, Mind, Medical, and Social pillars.<br> Tailored content is then delivered, in the<br> form of videos, games and mental activity <br>targeting improvement of balance, strength <br>and coordination. The AI assistant, "Jen", <br>offers contextual advice and reminders.</p>
+
+                    <p class="mt-14">Loaded with best features to ensure <br> employees attendance and records in a <br> single place. Check out the main listed<br> features.Loaded with best features to<br> ensure employees attendance and records<br> in a single place. Check out the main listed <br>features.Loaded with best features to <br>ensure employees attendance and records in a single place.</p>
                     <v-btn class="submit-button mt-10" @click="submitForm">
-                        <div class="circle-text">
+                        <div class="circle-chronos-text ">
                             <p class="ml-3">EX</p>
                         </div>
                         <span class="outside-text ml-3">PLORE MORE</span>
@@ -26,7 +26,7 @@
 
                 </v-col>
             </v-row>
-          
+
         </div>
         <v-row>
 
@@ -36,6 +36,7 @@
 </div>
 </template>
 
+    
 <script>
 export default {
     name: 'HorizontalScroll',
@@ -67,12 +68,12 @@ export default {
 };
 </script>
 
-    <style scoped>
-    @import "@/assets/styles/ageWiser.css";
-    .switch-container-projects {
-  position: absolute;
-  left: 25%;
+            <style scoped>
+            @import "@/assets/styles/chronos.css";
+            .switch-container-projects {
+          position: absolute;
+          left: 25%;
 
-}
+        }
 
-    </style >
+            </style >
