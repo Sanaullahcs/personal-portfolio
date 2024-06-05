@@ -1,3 +1,19 @@
+import AiTitle from '@/components/Projects/AITitle/AiTitle.vue';
+import CareerVi from '@/components/Projects/CareerVi/CareerVi.vue';
+import ChronosApp from '@/components/Projects/Chronos/ChronosApp.vue';
+import ChronosWebsite from '@/components/Projects/Chronos/ChronosWebsite.vue';
+import HrmsApp from '@/components/Projects/HRMS/hrmsApp.vue';
+import HrmsWebsite from '@/components/Projects/HRMS/hrmsWebsite.vue';
+import InteroadsWebsite from '@/components/Projects/Interoads/InteroadsWebsite.vue';
+import NextGradeApp from '@/components/Projects/NextGrade/NextGradeApp.vue';
+import NextGradeWebsite from '@/components/Projects/NextGrade/NextGradeWebsite.vue';
+import Proctor from '@/components/Projects/Proctor8/proctor.vue';
+import SafrcareApp from '@/components/Projects/SafrCare/SafrcareApp.vue';
+import SafrcareWebsite from '@/components/Projects/SafrCare/SafrcareWebsite.vue';
+import SpringBoard from '@/components/Projects/Springboard/SpringBoard.vue';
+import TSOB from '@/components/Projects/TSOB/TSOB.vue';
+import AgewiserApp from '@/components/Projects/agewiser/agewiserApp.vue';
+import AgewiserWebsite from '@/components/Projects/agewiser/agewiserWebsite.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
@@ -6,16 +22,11 @@ const routes = [
     name: 'Home',
     component: () => import('@/components/MainLayout/HomePage.vue')
   },
-  { 
-    path: '/ageWiser',
-    name: 'ageWiser',
-    component: () => import('@/components/Projects/TSOB/TSOB.vue')
-  },
+  
   // { path: '/about', component: About },
   { 
     path: '/projects',
     name: 'Projects',
-    component: () => import('@/views/ProjectsMainView/ProjectsView.vue'),
     children: [
       { 
         path: 'UIUX',
@@ -29,20 +40,35 @@ const routes = [
       { 
         path: 'websites',
         name: 'Websites',
-        component: () => import('@/views/ProjectsMainView/WebsitesView.vue/WebsiteMainView.vue'),
-        // children: [
-        //   { path: 'child1', component: UIUXChild1 },
-        //   { path: 'child2', component: UIUXChild2 }
-        // ]
+        children: [
+          { path: 'ageWiserWeb', component: AgewiserWebsite },
+          { path: 'SafrCareWeb', component: SafrcareWebsite },
+          { path: 'TSOBWeb', component: TSOB },
+          { path: 'SpringBoardWeb', component: SpringBoard },
+          { path: 'HRMSWeb', component: HrmsWebsite },
+          { path: 'InteroadsWeb', component: InteroadsWebsite },
+          { path: 'NextGradeWeb', component: NextGradeWebsite },
+          { path: 'Proctor8Web', component: Proctor },
+          { path: 'CareerViWeb', component: CareerVi },
+          { path: 'ChronosWeb', component: ChronosWebsite },
+
+        ]
       },
       { 
         path: 'Mobile_app',
         name: 'MobileApp',
-        component: () => import('@/views/ProjectsMainView/MobileAppView/MobileMainApp.vue'),
-        // children: [
-        //   { path: 'child1', component: AppChild1 },
-        //   { path: 'child2', component: AppChild2 }
-        // ]
+        children: [
+          { path: 'ageWiserApp', component: AgewiserApp },
+          { path: 'SafrCareApp', component: SafrcareApp },
+          { path: 'HRMSApp', component: HrmsApp },
+          { path: 'NextGradeApp', component: NextGradeApp },
+          { path: 'Proctor8Web', component: Proctor },
+          { path: 'CareerViWeb', component: CareerVi },
+          { path: 'ChronosApp', component: ChronosApp },
+          { path: 'aiApp', component: AiTitle },
+
+        ]
+       
       },
       { 
         path: 'software',
