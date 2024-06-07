@@ -10,14 +10,14 @@
         <div class="ageWiser-cover">
             <v-row>
                 <v-col cols="12" md="6">
-                    <div class="responsive-image-container">
-                        <v-img src="@/assets/images/ai-title.png" height="534" width="557" class="responsive-image"></v-img>
+                    <div>
+                        <v-img src="@/assets/images/ai-title.png"  max-height="450" ></v-img>
                     </div>
                 </v-col>
                 <v-col cols="12" md="6" class="projects-content">
 
-                    <p class="mt-14">Safrcare is a patient-centric healthcare<br> transportation platform designed to provide <br>non-emergency medical transportation <br>services. Our mission is to deliver affordable,<br> comprehensive, and wheelchair-accessible<br> transportation solutions for medical <br>appointments. With a focus on patient<br> comfort and convenience.</p>
-                    <v-btn class="submit-button mt-10" @click="submitForm">
+                    <p class="mt-3  SafrCare-para">Safrcare is a patient-centric healthcare <br> transportation platform designed to provide <br> non-emergency medical transportation <br> services. Our mission is to deliver affordable, <br> comprehensive, and wheelchair-accessible <br> transportation solutions for medical <br>appointments. With a focus on patient <br>comfort and convenience.</p>
+                    <v-btn class="submit-button-ai mt-10" @click="submitForm">
                         <div class="circle-ai-title-text ">
                             <p class="ml-3">EX</p>
                         </div>

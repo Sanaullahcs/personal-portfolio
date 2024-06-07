@@ -7,119 +7,39 @@
         <ul class="nav-list">
             <!-- Navigation Links -->
             <li v-if="showOtherLinks">
-                <router-link to="/">Home</router-link>
+                <router-link to="/" @click="goToHome">Home</router-link>
             </li>
             <li v-if="showOtherLinks">
                 <router-link to="/about">About</router-link>
             </li>
             <li v-if="showOtherLinks">
-                <span @click="toggleProjects">Projects</span>
+                <span  @click="handleScroll()">Projects</span>
             </li>
             <!-- <li v-if="showProjects && !showSubProjects.subProject1 && !showSubProjects.subProject2">
-            <span @click="toggleSubProjects('subProject1')">UX/UI</span>
-          </li> -->
-            <li v-if="showProjects && !showSubProjects.subProject1 && !showSubProjects.subProject2 && !showSubProjects.subProject3  && !showSubProjects.subProject4">
-                <span @click="toggleSubProjects('subProject2')">Websites</span>
+                <span @click="toggleSubProjects('subProject1')">UX/UI</span>
+              </li> -->
+            <!-- <li v-if="showProjects && !showSubProjects.subProject1 && !showSubProjects.subProject2 && !showSubProjects.subProject3  && !showSubProjects.subProject4">
+                <span @click="handleScroll()">Websites</span>
             </li>
             <li v-if="showProjects && !showSubProjects.subProject1 && !showSubProjects.subProject2  && !showSubProjects.subProject3  && !showSubProjects.subProject4">
-                <span @click="toggleSubProjects('subProject3')">Mobile Apps</span>
+                <span  @click="handleScroll()">Mobile Apps</span>
             </li>
             <li v-if="showProjects && !showSubProjects.subProject1 && !showSubProjects.subProject2 && !showSubProjects.subProject3  && !showSubProjects.subProject4">
                 <span @click="toggleSubProjects('subProject4')">Softwares</span>
-            </li>
+            </li> -->
             <!-- <li v-if="showSubProjects.subProject1">
-            <ul>
-              <li v-for="project in subProjects.subProject1" :key="project.id">
-                <router-link :to="`/projects/${project.id}`">{{ project.name }}</router-link>
-              </li>
-            </ul>
-          </li> -->
-
-            <li v-if="showSubProjects.subProject2" class="nav-list-small">
-                <ul class="navList">
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/ageWiserWeb'">AgeWiser</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/SafrCareWeb'">SafrCare</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/TSOBWeb'">TSOB</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/SpringBoardWeb'">SpringBoard</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/HRMSWeb'">HRMS</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/InteroadsWeb'">Interoads</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/NextGradeWeb'">NextGrade</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/Proctor8Web'">Proctor8</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/CareerViWeb'">CareerVi</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/websites/ChronosWeb'">Chronos</router-link>
-                    </li>
+                <ul>
+                  <li v-for="project in subProjects.subProject1" :key="project.id">
+                    <router-link :to="`/projects/${project.id}`">{{ project.name }}</router-link>
+                  </li>
                 </ul>
-            </li>
+              </li> -->
+
+         
             <!-- mobile apps -->
-            <li v-if="showSubProjects.subProject3" class="nav-list-small">
-                <ul class="navList">
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/ageWiserApp'">AgeWiser</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/SafrCareApp'">SafrCare</router-link>
-                    </li>
-
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/HRMSApp'">HRMS</router-link>
-                    </li>
-
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/NextGradeApp'">NextGrade</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/ChronosApp'">Chronos</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/aiApp'">AI Title</router-link>
-                    </li>
-                </ul>
-            </li>
+           
             <!-- softwares -->
-            <li v-if="showSubProjects.subProject4" class="nav-list-small">
-                <ul class="navList">
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/ageWiserApp'">AgeWiser</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/SafrCareApp'">SafrCare</router-link>
-                    </li>
-
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/HRMSApp'">HRMS</router-link>
-                    </li>
-
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/NextGradeApp'">NextGrade</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/ChronosApp'">Chronos</router-link>
-                    </li>
-                    <li v-for="project in subProjects.subProject2" :key="project.id">
-                        <router-link :to="'/projects/Mobile_app/aiApp'">AI Title</router-link>
-                    </li>
-                </ul>
-            </li>
-
+      
             <li v-if="showOtherLinks">
                 <router-link to="/contact">Contact</router-link>
             </li>
@@ -144,7 +64,6 @@
 </div>
 </template>
 
-  
 <script>
 export default {
     props: {
@@ -212,12 +131,29 @@ export default {
             this.showSubProjects.subProject3 = subProject === 'subProject3';
             this.showSubProjects.subProject4 = subProject === 'subProject4';
 
+        },
+        handleScroll() {
+            this.$router.push('/'); // Navigate to the homepage
+            setTimeout(() => {
+                this.emitter.emit('scroll-to-websites'); // Scroll to the fifth child element
+            }, 500);
+            this.$emit('close'); // Close the navigation drawer
+        },
+
+        goToHome() {
+            // Check if the current route is already the home page ("/")
+            if (this.$route.path === '/') {
+                // If it is, close the drawer
+                this.closeDrawer();
+            } else {
+                // Otherwise, navigate to the home page
+                this.$router.push('/');
+            }
         }
     }
 };
 </script>
 
-  
 <style scoped>
 .nav-list {
     list-style: none;
@@ -261,13 +197,7 @@ export default {
 .social-accounts a:hover {
     color: #F8760B;
 }
-
-/* Hover effect to rotate the arrow */
-.social-accounts .arrow {
-    transition: transform 0.3s;
-}
-
 .social-accounts .d-flex:hover .arrow {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 </style>

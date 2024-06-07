@@ -10,14 +10,14 @@
             <div class="ageWiser-cover">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <div class="responsive-image-container">
-                            <v-img src="@/assets/images/InteroadsDashboard.png" height="534" width="557" class="responsive-image"></v-img>
+                        <div>
+                            <v-img src="@/assets/images/InteroadsDashboard.png"  max-height="450" class="responsive-image-interoads"></v-img>
                         </div>
                     </v-col>
                     <v-col cols="12" md="6" class="projects-content">
     
-                        <p class="mt-14">AgeWiser is a holistic AI-driven senior care app.<br> Upon first use, it assesses users across<br> Mobility, Mind, Medical, and Social pillars.<br> Tailored content is then delivered, in the<br> form of videos, games and mental activity <br>targeting improvement of balance, strength <br>and coordination. The AI assistant, "Jen", <br>offers contextual advice and reminders.</p>
-                        <v-btn class="submit-button mt-10" @click="submitForm">
+                        <p class=" hrms-text">Introducing the Interoads Knowledge Testing<br> System, tailored specifically for the DC DMV.<br> Our platform allows for the implementation<br> of multiple tests across various locations,<br> supporting an unlimited range of <br>languages. Through our intuitive dashboards,<br> managing operations and monitoring test<br> results has never been easier.</p>
+                        <v-btn class="submit-button-hrms mt-10" @click="submitForm">
                             <div class="circle-human-text ">
                                 <p class="ml-3">EX</p>
                             </div>

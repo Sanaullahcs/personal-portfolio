@@ -28,7 +28,7 @@
                                 </v-btn>
                             </div>
                         </v-col>
-                        <v-col cols="10" lg="10" md="12" sm="12" xs="12">
+                        <v-col cols="11" lg="11" md="12" sm="12" xs="12">
 
                             <div>
                                 <Carousel class="reviewCarosel" :breakpoints="carouselBreakpoints" :wrap-around="true" :autoplay="2000" ref="secondCarousel">
@@ -36,7 +36,7 @@
                                         <!-- <v-card class="organization-card"> -->
                                         <div class="carousel__item">
                                             <p class="orgCardText">{{ slide.text }}</p>
-                                            <h2 class="orgCardHeading">{{ slide.heading }}</h2>
+                                            <p class="about-text-two">Personalized service <br> with perfection is our<br> mantra. We go above <br>and beyond to cater to<br> your requirements and <br>deliver products and <br>services that surpass your <br>expectations.</p>
                                         </div>
                                         <!-- </v-card> -->
                                     </Slide>
@@ -199,7 +199,7 @@ export default {
     font-family: "Tai Heritage Pro", serif;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 18px;
+    font-size: 20px;
     text-align: left;
     margin: 10px 0 0 0;
 }

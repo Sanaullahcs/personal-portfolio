@@ -1,18 +1,24 @@
 import AiTitle from '@/components/Projects/AITitle/AiTitle.vue';
 import CareerVi from '@/components/Projects/CareerVi/CareerVi.vue';
 import ChronosApp from '@/components/Projects/Chronos/ChronosApp.vue';
+import ChronosDashboard from '@/components/Projects/Chronos/ChronosDashboard.vue';
 import ChronosWebsite from '@/components/Projects/Chronos/ChronosWebsite.vue';
 import HrmsApp from '@/components/Projects/HRMS/hrmsApp.vue';
+import HrmsDashboard from '@/components/Projects/HRMS/hrmsDashboard.vue';
 import HrmsWebsite from '@/components/Projects/HRMS/hrmsWebsite.vue';
+import InteroadsDashBoard from '@/components/Projects/Interoads/InteroadsDashBoard.vue';
 import InteroadsWebsite from '@/components/Projects/Interoads/InteroadsWebsite.vue';
 import NextGradeApp from '@/components/Projects/NextGrade/NextGradeApp.vue';
+import NextGradeDashboard from '@/components/Projects/NextGrade/NextGradeDashboard.vue';
 import NextGradeWebsite from '@/components/Projects/NextGrade/NextGradeWebsite.vue';
 import Proctor from '@/components/Projects/Proctor8/proctor.vue';
+import SafrDashBoard from '@/components/Projects/SafrCare/SafrDashBoard.vue';
 import SafrcareApp from '@/components/Projects/SafrCare/SafrcareApp.vue';
 import SafrcareWebsite from '@/components/Projects/SafrCare/SafrcareWebsite.vue';
 import SpringBoard from '@/components/Projects/Springboard/SpringBoard.vue';
 import TSOB from '@/components/Projects/TSOB/TSOB.vue';
 import AgewiserApp from '@/components/Projects/agewiser/agewiserApp.vue';
+import AgewiserDashboard from '@/components/Projects/agewiser/agewiserDashboard.vue';
 import AgewiserWebsite from '@/components/Projects/agewiser/agewiserWebsite.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -28,15 +34,15 @@ const routes = [
     path: '/projects',
     name: 'Projects',
     children: [
-      { 
-        path: 'UIUX',
-        name: 'UIUX',
-        component: () => import('@/views/ProjectsMainView/uiuxViews.vue/UiuxMainView.vue'),
-        // children: [
-        //   { path: 'child1', component: UIUXChild1 },
-        //   { path: 'child2', component: UIUXChild2 } 
-        // ]
-      },
+      // { 
+      //   path: 'UIUX',
+      //   name: 'UIUX',
+      //   component: () => import('@/views/ProjectsMainView/uiuxViews.vue/UiuxMainView.vue'),
+      //   children: [
+      //     { path: 'child1', component: UIUXChild1 },
+      //     { path: 'child2', component: UIUXChild2 } 
+      //   ]
+      // },
       { 
         path: 'websites',
         name: 'Websites',
@@ -71,20 +77,24 @@ const routes = [
        
       },
       { 
-        path: 'software',
-        name: 'Software',
-        component: () => import('@/views/ProjectsMainView/SoftwaresMainView/SoftwareView.vue'),
-        // children: [
-        //   { path: 'child1', component: SoftwareChild1 },
-        //   { path: 'child2', component: SoftwareChild2 }
-        // ]
+        path: 'Softwares',
+        name: 'Softwares',
+        children: [
+          { path: 'ageWiserDashboard', component: AgewiserDashboard },
+          { path: 'SafrCareDashboard', component: SafrDashBoard },
+          { path: 'HRMSDashboard', component: HrmsDashboard   },
+          { path: 'NextGradeDashboard', component: NextGradeDashboard },
+          { path: 'InteroadsDashboard', component: InteroadsDashBoard  }, 
+          { path: 'ChronosDashboard', component: ChronosDashboard  },
+
+        ]
       }
     ]
   },
   { 
     path: '/contact',
     name: 'Contact',
-    component: () => import('@/views/ContactMainView.vue/ContactView.vue')
+    component: () => import('@/components/ContactPages/ContactUs.vue')
   },
   { 
     path: '/about',

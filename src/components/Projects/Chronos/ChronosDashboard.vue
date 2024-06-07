@@ -10,14 +10,14 @@
             <div class="ageWiser-cover">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <div class="responsive-image-container">
-                            <v-img src="@/assets/images/chronosdashboard.png" height="534" width="557" class="responsive-image"></v-img>
+                        <div>
+                            <v-img src="@/assets/images/chronosdashboard.png"  max-height="450" class="responsive-image-chronos"></v-img>
                         </div>
                     </v-col>
                     <v-col cols="12" md="6" class="projects-content">
     
-                        <p class="mt-14">Loaded with best features to ensure <br> employees attendance and records in a <br> single place. Check out the main listed<br> features.Loaded with best features to<br> ensure employees attendance and records<br> in a single place. Check out the main listed <br>features.Loaded with best features to <br>ensure employees attendance and records in a single place.</p>
-                        <v-btn class="submit-button mt-10" @click="submitForm">
+                        <p class="mt-3 chronos-para">Loaded with best features to ensure <br> employees attendance and records in a <br> single place. Check out the main listed<br> features.Loaded with best features to<br> ensure employees attendance and records<br> in a single place. Check out the main listed <br>features.Loaded with best features to <br>ensure employees attendance and records <br>in a single place.</p>
+                        <v-btn class="submit-button-chronos mt-10" @click="submitForm">
                             <div class="circle-chronos-text ">
                                 <p class="ml-3">EX</p>
                             </div>

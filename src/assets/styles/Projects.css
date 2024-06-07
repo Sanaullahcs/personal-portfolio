@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Noto+Sans+JP:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tai+Heritage+Pro:wght@400;700&family=Viga&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .submit-button {
   position: relative;
@@ -29,14 +29,12 @@
 
 }
 
-.outside-text {
-    font-weight: bold;
-    margin-top: 10px;
-    font-family: "Tai Heritage Pro", serif;
-    text-align: center; /* Center align the text */
-    color: rgba(255, 255, 255, 0.562);
-  }
-  
+.personalized-pro-text{
+  color: rgba(255, 255, 255, 0.734);
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
 
 .responsive-image-container {
   position: relative;
@@ -104,4 +102,41 @@ margin-left: 20px;
 
 .mdi-arrow-top-right{
   color: white;
+}
+.switch-container-projects {
+  position: absolute;
+  left: 25%;
+
+}
+.switch-container {
+  width: 25px;
+  height: 42px;
+  border: 2px solid white;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 90%;
+}
+
+.switch-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #D9D9D9;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  transition: top 1s ease; /* Slow and smooth transition */
+}
+
+.switch-dot-on {
+  top: 18px;
+}
+
+.creative-text-four{
+  font-family: "Tai Heritage Pro", serif ;
+  color: #ffffffa0;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 30px;
 }

@@ -10,19 +10,19 @@
             <div class="ageWiser-cover">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <div class="responsive-image-container">
-                    <v-img src="@/assets/images/ageWiserApp.png" height="534" width="557" class="responsive-image"></v-img>
+                        <div class="responsive-image-ageWiser">
+                    <v-img src="@/assets/images/ageWiserApp.png" max-height="440"  class="responsive-ageWise"></v-img>
                 </div>
                     </v-col>
                     <v-col cols="12" md="6" class="projects-content">
                             
-                        <p class="mt-14">AgeWiser is a holistic AI-driven senior care app.<br> Upon first use, it assesses users across<br> Mobility, Mind, Medical, and Social pillars.<br> Tailored content is then delivered, in the<br> form of videos, games and mental activity <br>targeting improvement of balance, strength <br>and coordination. The AI assistant, "Jen", <br>offers contextual advice and reminders.</p>
-                        <v-btn class="submit-button mt-10" @click="submitForm">
-                            <div class="circle-text">
-                                <p class="ml-3">EX</p>
-                            </div>
-                            <span class="outside-text ml-3">PLORE MORE</span>
-                        </v-btn>
+                        <p class=" ageWiser-para">AgeWiser is a holistic AI-driven senior care app.<br> Upon first use, it assesses users across<br> Mobility, Mind, Medical, and Social pillars.<br> Tailored content is then delivered, in the<br> form of videos, games and mental activity <br>targeting improvement of balance, strength <br>and coordination. The AI assistant, "Jen", <br>offers contextual advice and reminders.</p>
+                        <v-btn class="submit-button-agewiser mt-3" @click="submitForm">
+                        <div class="circle-text-agewiser">
+                            <p class="ml-3">EX</p>
+                        </div>
+                        <span class="outside-text ml-3">PLORE MORE</span>
+                    </v-btn>
     
                     </v-col>
                 </v-row>

@@ -56,7 +56,7 @@
   .responsive-image-container {
     padding-top: 100%; /* Adjust aspect ratio for smaller screens if needed */
   }
-}.submit-button {
+}.submit-button-chronos {
   position: relative;
   width: 200px; 
   height: 60px; 
@@ -119,4 +119,13 @@ margin-left: 20px;
     font-size: 18px;
 
 
+}
+.chronos-para{
+  right: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400 !important;
+  font-size:  18px !important;
+  color: rgba(255, 255, 255, 0.804) !important;
 }

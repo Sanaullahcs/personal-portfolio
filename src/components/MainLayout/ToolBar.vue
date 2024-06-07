@@ -14,7 +14,6 @@
 </transition>
 </template>
 
-  
 <script>
 import NavigationDrawer from '@/components/MainLayout/NavigationDrawer.vue';
 
@@ -37,7 +36,6 @@ export default {
 };
 </script>
 
-  
 <style scoped>
 @import "@/assets/styles/style.css";
 
@@ -45,16 +43,15 @@ export default {
     background-color: black;
 }
 
-.v-navigation-drawer {
+/* .v-navigation-drawer {
     position: absolute !important;
-}
+} */
 
 .drawer-slide-leave-active {
-  transition: transform 0.9s;
+    transition: transform 0.9s;
 }
 
-
 .drawer-slide-leave-to {
-  transform: translateX(-100%);
+    transform: translateX(-100%);
 }
 </style>

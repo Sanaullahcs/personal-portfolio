@@ -11,13 +11,13 @@
                 <v-row>
                     <v-col cols="12" md="6">
                         <div class="responsive-image-container">
-                            <v-img src="@/assets/images/hrmsDashboard.png" height="534" width="557" class="responsive-image"></v-img>
+                            <v-img src="@/assets/images/hrmsDashboard.png" max-height="450" class="responsive-image mt-5"></v-img>
                         </div>
                     </v-col>
                     <v-col cols="12" md="6" class="projects-content">
     
-                        <p class="mt-14">AgeWiser is a holistic AI-driven senior care app.<br> Upon first use, it assesses users across<br> Mobility, Mind, Medical, and Social pillars.<br> Tailored content is then delivered, in the<br> form of videos, games and mental activity <br>targeting improvement of balance, strength <br>and coordination. The AI assistant, "Jen", <br>offers contextual advice and reminders.</p>
-                        <v-btn class="submit-button mt-10" @click="submitForm">
+                        <p class="mt-1 hrms-text">HRMS-Teamsly elevates HR efficiency by <br>streamlining processes like payroll,<br> performance tracking, and recruitment in<br> one intuitive platform. It reduces <br>administrative burdens, enhances productivity,<br> and allows HR teams to focus on strategic<br> initiatives and employee engagement.</p>
+                        <v-btn class="submit-button-hrms mt-10" @click="submitForm">
                             <div class="circle-human-text ">
                                 <p class="ml-3">EX</p>
                             </div>

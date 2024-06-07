@@ -10,14 +10,14 @@
             <div class="ageWiser-cover">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <div class="responsive-image-container">
-                            <v-img src="@/assets/images/NextGradeWebsite.png" height="534" width="557" class="responsive-image"></v-img>
+                        <div>
+                            <v-img src="@/assets/images/NextGradeWebsite.png" max-height="450" class="responsive-image-nextGrade"></v-img>
                         </div>
                     </v-col>
                     <v-col cols="12" md="6" class="projects-content">
     
-                        <p class="mt-14">Next Grade offers world class instructional<br> videos, practice questions, quizzes and <br> individualized testing environment to <br> empower learners of all ages to easily learn<br> new concepts, practice and validate their <br>expertise through mobile phone and web based platforms.</p>
-                        <v-btn class="submit-button mt-10" @click="submitForm">
+                        <p class="mt-2 nextGrade-text">Next Grade offers world class instructional<br> videos, practice questions, quizzes and <br> individualized testing environment to <br> empower learners of all ages to easily learn<br> new concepts, practice and validate their <br>expertise through mobile phone and web <br>based platforms.</p>
+                        <v-btn class="submit-button-nextGrade mt-10" @click="submitForm">
                             <div class="circle-grade-text ">
                                 <p class="ml-3">EX</p>
                             </div>

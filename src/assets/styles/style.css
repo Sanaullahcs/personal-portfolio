@@ -52,20 +52,24 @@ body, html {
   text-align: right;
   color: white;
   white-space: nowrap;
-  margin-top: 393px;
+  bottom: 50%;
+  position: absolute;
+  margin-left: -30px;
 }
 
 .label-text-two {
   display: block;
   transform: rotate(-90deg) translate(-100%);
   text-align: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.233);
   white-space: nowrap;
   justify-content: center;
   font-size: 18px;
   font-weight: 400;
   position: absolute;
   bottom: 90px;
+  margin-left: 10px;
+
 }
 
 .navigation-drawer {
@@ -111,6 +115,7 @@ body, html {
 
 .nav-item {
   text-decoration: none;
+  cursor: cursor;
 }
 
 .nav-item a {
@@ -128,6 +133,7 @@ body, html {
 
 .nav-list {
   margin-top: 3%;
+  pointer: cursor;
 }
 
 .social-accounts {
@@ -210,7 +216,7 @@ body, html {
 }
 
 .tool-bar{
-  border-right: 1px solid rgba(255, 255, 255, 0.525) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.26) !important;
 }
   ::-webkit-scrollbar {
     height: .1rem;
@@ -231,3 +237,4 @@ body, html {
     border-radius: 3rem;
   }
   
+ 

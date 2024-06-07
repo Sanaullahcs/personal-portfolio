@@ -10,14 +10,14 @@
             <div class="ageWiser-cover">
                 <v-row>
                     <v-col cols="12" md="6">
-                        <div class="responsive-image-container">
-                            <v-img src="@/assets/images/careerVi.png" height="534" width="557" class="responsive-image"></v-img>
+                        <div >
+                            <v-img src="@/assets/images/careerVi.png" max-height="450" class="responsive-image-careerVi"></v-img>
                         </div>
                     </v-col>
                     <v-col cols="12" md="6" class="projects-content">
     
-                        <p class="mt-14">Proctor8 is the most innovative knowledge <br> testing system, featuring advanced AI-driven <br>proctoring, real-time monitoring, and robust<br> analytics. It ensures exam integrity and<br> provides valuable insights into performance. <br>With a user-friendly interface and seamless <br>integration, Proctor8 sets a new standard in<br> reliable and efficient assessments.</p>
-                        <v-btn class="submit-button mt-10" @click="submitForm">
+                        <p class="mt-14 career-para">Our job board is the number one <br>destination for hiring and finding jobs. It <br> offers a comprehensive and user-friendly  <br>platform for employers to post openings and <br> for job seekers to find their ideal roles. With  <br>a vast array of listings across various  <br>industries and advanced search features, we <br> connect the right talent with the right <br> opportunities efficiently and effectively.</p>
+                        <v-btn class="submit-button-career mt-2" @click="submitForm">
                             <div class="circle-career-text ">
                                 <p class="ml-3">EX</p>
                             </div>

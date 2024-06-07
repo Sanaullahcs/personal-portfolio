@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Noto+Sans+JP:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tai+Heritage+Pro:wght@400;700&family=Viga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-.submit-button {
+.submit-button-agewiser {
   position: relative;
-  width: 130px; 
+  width: 200px; 
   height: 60px; 
   display: flex;
   align-items: center;
@@ -12,15 +12,25 @@
   font-size: 20px;
   padding: 20px;
   background-color: black;
+  font-weight: 400;
+}
+.ageWiser-para{
+  right: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size:  18px;
+  color: rgba(255, 255, 255, 0.804);
 }
 
-.circle-text {
+.circle-text-agewiser {
   left: 0;
   width: 45px;
   height: 45px;
   line-height: 56px;
   border-radius: 50%;
-  background-color: #F8760B;
+  background-color: #FCC20D !important;
   text-align: center;
   font-weight: bold;
   font-family: "Tai Heritage Pro", serif ;
@@ -38,20 +48,7 @@
   }
   
 
-.responsive-image-container {
-  position: relative;
-  overflow: hidden;
-  padding-top: 75%; /* This creates a 4:3 aspect ratio container */
-}
 
-.responsive-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 @media (max-width: 600px) {
   .responsive-image-container {
     padding-top: 100%; /* Adjust aspect ratio for smaller screens if needed */
@@ -107,7 +104,8 @@ margin-left: 20px;
   color: white;
 }
 .ageWiser-cover{
-    border: 1px solid rgba(255, 255, 255, 0.477);
+    border: 1px solid rgba(255, 255, 255, 0.189);
+    padding: 70px;
 }
 
 .projects-content{

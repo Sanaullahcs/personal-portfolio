@@ -53,12 +53,13 @@
   margin-top: 10px;
   font-family: "Tai Heritage Pro", serif ;
   font-weight: 400;
+  color: white !important;
 }
 
 .responsive-image-container {
   position: relative;
   overflow: hidden;
-  padding-top: 75%; /* This creates a 4:3 aspect ratio container */
+  padding-top: 75%; 
 }
 
 .responsive-image {
@@ -130,4 +131,15 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  bottom: 30px;
+}
+.fields-margin{
+  margin-top: 150px;
+
+}
+.social-accounts-two a:hover {
+  color: #F8760B;
+}
+.social-accounts-two .d-flex:hover .mdi-arrow-top-right{
+transform: rotate(45deg);
 }
