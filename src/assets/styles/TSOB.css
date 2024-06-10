@@ -55,8 +55,13 @@
 }
 @media (max-width: 600px) {
   .responsive-image-container {
-    padding-top: 100%; /* Adjust aspect ratio for smaller screens if needed */
+    padding-top:
+ 100%; /* Adjust aspect ratio for smaller screens if needed */
   }
+  .beauty-text{
+    font-size: 30px !important;
+     }
+   
 }.submit-button-beauty {
   position: relative;
   width: 200px; 
@@ -133,3 +138,4 @@ margin-left: 20px;
   color: rgba(255, 255, 255, 0.804);
 
 }
+

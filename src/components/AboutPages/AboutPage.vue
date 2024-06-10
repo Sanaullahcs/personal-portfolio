@@ -25,7 +25,7 @@
 
             </v-col>
 
-            <v-col cols="6" v-if="showAdditionalContent">
+            <v-col md="6" cols="12" v-if="showAdditionalContent">
                 <div class="card-container mt-5" style="color: white">
                     <div class="card d-flex flex-row">
                         <div class="pl-4 pr-4 pb-4 ml-16">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </v-col>
-            <v-col cols="6" v-if="showAdditionalContent">
+            <v-col md="6" cols="12" v-if="showAdditionalContent">
                 <p class="about-text-two mt-16">Personalized service with perfection is our mantra. We go <br>above and beyond to cater to your requirements and deliver <br> products and services that surpass your expectations. </p>
             </v-col>
             <v-col cols="12" v-if="showAdditionalContent">

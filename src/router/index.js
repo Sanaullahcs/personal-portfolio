@@ -20,6 +20,7 @@ import TSOB from '@/components/Projects/TSOB/TSOB.vue';
 import AgewiserApp from '@/components/Projects/agewiser/agewiserApp.vue';
 import AgewiserDashboard from '@/components/Projects/agewiser/agewiserDashboard.vue';
 import AgewiserWebsite from '@/components/Projects/agewiser/agewiserWebsite.vue';
+
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
@@ -28,6 +29,7 @@ const routes = [
     name: 'Home',
     component: () => import('@/components/MainLayout/HomePage.vue')
   },
+  
   
   // { path: '/about', component: About },
   { 

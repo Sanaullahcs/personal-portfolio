@@ -4,7 +4,7 @@
         <v-row>
             <v-col cols="12">
                 <p class="project-text ml-16">My <br>projects</p>
-                <p class="personalized-pro-text text-center">Personalized service with perfection is our mantra. We go above and beyond to cater to your requirements and <br>deliver products and services that surpass your expectations. We understand that you can go anywhere for<br> your technology needs, what stands us apart is our extensive experience and diversified team that offer a<br> perfect recipe for your success.
+                <p class="personalized-pro-text text-center ml-15 mr-15">Personalized service with perfection is our mantra. We go above and beyond to cater to your requirements and deliver products and services that surpass your expectations. We understand that you can go anywhere for your technology needs, what stands us apart is our extensive experience and diversified team that offer a perfect recipe for your success.
 
                     Psst! We have the secret sauce for your business.</p>
             </v-col>

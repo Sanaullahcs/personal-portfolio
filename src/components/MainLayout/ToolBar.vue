@@ -1,7 +1,9 @@
 <template>
 <v-navigation-drawer color="black" width="100" permanent height="auto" class="tool-bar">
+    <MouseAnimations/>
+
     <div>
-        <v-img src="@/assets/icons/nav-icon.png" width="30" height="21" @click="toggleDrawer" class="menu-icon mt-10 ml-5"></v-img>
+        <v-img src="@/assets/icons/nav-icon.png" width="30" height="21" @click="toggleDrawer" class="menu-icon mt-10"></v-img>
         <div class="label">
             <span class="label-text">Online Portfolio Umair</span>
             <span class="label-text-two">© 2024</span>
@@ -16,10 +18,12 @@
 
 <script>
 import NavigationDrawer from '@/components/MainLayout/NavigationDrawer.vue';
+import MouseAnimations from '@/components/MainLayout/MouseAnimations.vue'
 
 export default {
     components: {
         NavigationDrawer,
+        MouseAnimations
     },
     props: {
         drawerVisible: {

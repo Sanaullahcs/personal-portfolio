@@ -1,8 +1,10 @@
 <template>
 <v-container fluid class="pa-0 ma-0">
+    <div ref="box" class="box"></div>
+
     <v-row no-gutters>
         <v-col cols="12">
-            <div ref="scrollingWrapper" class="scrolling-wrapper">
+            <div ref="scrollingWrapper" class="scrolling-wrapper" id="scrollingWrapper">
                 <div class="card">
                     <VisionToExcellence />
                 </div>
@@ -15,7 +17,7 @@
                 <div class="card">
                     <MyProjects />
                 </div>
-                <div class="card">
+                <div class="card" id="ageWiser">
                     <agewiserWebsite />
                 </div>
                 <div class="card">
@@ -163,24 +165,39 @@ export default {
             this.drawerVisible = !this.drawerVisible;
         },
         initializeScrollAnimation() {
-            const sections = this.$refs.scrollingWrapper.children;
-            gsap.to(sections, {
-                xPercent: -100 * (sections.length - 1),
-                ease: "none",
-                scrollTrigger: {
-                    trigger: this.$refs.scrollingWrapper,
-                    pin: true,
-                    scrub: 1, // Decrease this value for slower scrolling
-                    end: "+=40000", // Increase this value for slower scrolling
-                }
+            const scrollingWrapper = this.$refs.scrollingWrapper;
+            const sections = scrollingWrapper.children;
+
+            // Clean up existing ScrollTrigger instances
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            gsap.set(sections, {
+                clearProps: "all"
             });
+
+            if (window.innerWidth > 1000) {
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: scrollingWrapper,
+                        pin: true,
+                        scrub: 1,
+                        end: () => "+=" + scrollingWrapper.offsetWidth * sections.length,
+                    }
+                });
+            } else {
+                gsap.set(sections, {
+                    xPercent: 0,
+                    yPercent: 0
+                });
+            }
         },
         scrollToAgewiserWebsite() {
             // Get the element containing agewiserWebsite
             const scrollingWrapper = this.$refs.scrollingWrapper;
             if (scrollingWrapper) {
                 const agewiserWebsiteCard = scrollingWrapper.querySelector('.card:nth-child(5)'); // Adjust the index if needed
-
+                console.log('agewiserWebsiteCard', agewiserWebsiteCard)
                 // Scroll to the element
                 if (agewiserWebsiteCard) {
                     agewiserWebsiteCard.scrollIntoView({
@@ -191,37 +208,68 @@ export default {
                 }
             }
         },
-
     },
     mounted() {
-        this.emitter.on('scroll-to-websites', () => {
-            this.scrollToAgewiserWebsite();
-        })
-        this.initializeScrollAnimation();
+      
+        console.log('this.$vuetify.breakpoint', this.$vuetify.breakpoint);
 
-        // Add event listener for page refresh
-        window.addEventListener('beforeunload', () => {
-            // Scroll back to the start
-            window.scrollTo(0, 0);
+        this.emitter.on('scroll-to-websites', () => {
+            console.log('home page');
+            const section = document.getElementById('ageWiser');
+
+            if (section) {
+                const container = document.querySelector('.scrolling-wrapper');
+
+                if (this.$vuetify.breakpoint && this.$vuetify.breakpoint.name) {
+                    // Switch based on the breakpoint name
+                    switch (this.$vuetify.breakpoint.name) {
+                        case 'xl':
+                        case 'lg':
+                            container.scrollTo({
+                                left: section.offsetLeft,
+                                behavior: 'smooth'
+                            });
+                            break;
+                        case 'md':
+                        case 'sm':
+                        case 'xs':
+                            section.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                            break;
+                        default:
+                            section.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                    }
+                } else {
+                    section.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
         });
 
-        // setTimeout(() => {
-        //     this.scrollToAgewiserWebsite();
-        // }, 500); 
-    },
+        this.$nextTick(() => {
+            this.initializeScrollAnimation();
+        });
 
+        window.addEventListener('resize', this.initializeScrollAnimation);
+
+        window.addEventListener('beforeunload', () => {
+            window.scrollTo(0, 0);
+        });
+    },
     beforeUnmount() {
+        window.removeEventListener('resize', this.initializeScrollAnimation);
         window.removeEventListener('beforeunload', () => {
             window.scrollTo(0, 0);
         });
     },
-
 };
 </script>
 
 <style>
-@import "@/assets/styles/style.css";
-
 html,
 body,
 #app {
@@ -230,14 +278,13 @@ body,
 }
 
 .scrolling-wrapper {
-    overflow-x: hidden;
-    white-space: nowrap;
     height: 100vh;
     width: 100vw;
     scroll-behavior: smooth;
     scrollbar-width: none;
     display: flex;
     flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .scrolling-wrapper::-webkit-scrollbar {
@@ -247,5 +294,19 @@ body,
 .scrolling-wrapper .card {
     flex: 0 0 100vw;
     justify-content: center;
+}
+
+/* Media query to change behavior for screens narrower than 1000px */
+@media (max-width: 1000px) {
+    .scrolling-wrapper {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .scrolling-wrapper .card {
+        flex: 0 0 auto;
+        width: 100%;
+    }
 }
 </style>

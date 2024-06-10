@@ -29,6 +29,7 @@ body, html {
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
+  margin-left: 20px !important;
 }
 
 .vertical-heading {
@@ -237,4 +238,43 @@ body, html {
     border-radius: 3rem;
   }
   
+  @media only screen and (min-width: 300px) and (max-width: 1200px) {
+    .creative-text-one{
+
+    
+      font-size: 18px;
+    }
+    .creative-text-two{
+    
+      font-size: 35px;
+      
+    }
+    .creative-text-three{
+      font-size: 18px;
+    
+    }
+    .switch-container-outer{
+      bottom: -160px !important;
+      left: 45%;
+    }
+    .menu-icon {
+      margin-left: 0px !important;
+    }
+    .v-navigation-drawer{
+      width: 40px !important;
+    }
+    .label-text {
+      margin-left: -53px !important;
+}
+.label-text-two{
+  margin-left: -10px !important;
+
+}
+
+.social-accounts {
  
+  bottom: 10px;
+  font-size: 10px;
+ 
+}
+  }

@@ -56,6 +56,9 @@
   .responsive-image-container {
     padding-top: 100%; /* Adjust aspect ratio for smaller screens if needed */
   }
+  .grade-text{
+    font-size: 40px !important;
+     }
 }.submit-button-nextGrade {
   position: relative;
   width: 200px; 

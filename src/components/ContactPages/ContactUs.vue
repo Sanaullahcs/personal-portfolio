@@ -2,16 +2,17 @@
     <div class="contact-page mt-16">
         <v-container >
         <v-row>
-            <v-col cols="11" md="6">
+            <v-col cols="12" md="6" class="responsive-contact">
                 <v-container>
-                    <p class="contact-text text-center">Contact</p>
+                    <p class="contact-text text-center ml-10">Contact</p>
                     
                 </v-container>
-                <div class="responsive-image-container">
+                <div class="responsive-image-container ml-16 mr-16">
                     <v-img src="@/assets/images/contactUs.png"  class="responsive-image"></v-img>
                 </div>
             </v-col>
-            <v-col cols="12" md="5" class="fields-margin">
+            <v-col cols="12" md="5" class="fields-margin ">
+               <div class="ml-10">
                 <v-row>
                     <v-col cols="12">
                         <v-text-field label="YOUR NAME" variant="plain" class="custom-underline"></v-text-field>
@@ -38,6 +39,7 @@
     
                     </v-col>
                 </v-row>
+               </div>
             </v-col>
             <v-col>
                 <div class="social-accounts-two d-flex">

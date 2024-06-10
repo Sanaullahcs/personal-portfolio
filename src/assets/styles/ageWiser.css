@@ -53,6 +53,10 @@
   .responsive-image-container {
     padding-top: 100%; /* Adjust aspect ratio for smaller screens if needed */
   }
+  .ageWiser-text{
+    font-size: 40px !important;
+     }
+   
 }.submit-button {
   position: relative;
   width: 200px; 

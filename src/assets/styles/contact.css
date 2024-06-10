@@ -143,3 +143,21 @@
 .social-accounts-two .d-flex:hover .mdi-arrow-top-right{
 transform: rotate(45deg);
 }
+
+@media (max-width: 1600px) {
+  .fields-margin{
+    margin-top: 80px;
+  
+  }
+ 
+}
+
+@media (max-width: 1000px) {
+  
+  .responsive-contact{
+margin-top: 200px;
+  }
+  .social-accounts-two{
+    bottom: 0px !important;
+  }
+}

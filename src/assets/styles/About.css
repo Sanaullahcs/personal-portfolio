@@ -182,3 +182,19 @@
 .plus-image{
   margin-top: 70px;
 }
+
+@media (max-width: 1600px) {
+  .about-text-margin{
+   
+    margin-top: 80px;
+  
+  }
+ 
+}
+@media (max-width: 1900px) {
+  
+  .about-text-two{
+    font-size: 12px;
+  
+  }
+}
