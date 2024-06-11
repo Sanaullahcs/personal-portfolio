@@ -17,9 +17,9 @@
                     <v-col cols="12" md="6" class="projects-content">
     
                         <p class="mt-3 hrms-text">HRMS-Teamsly elevates HR efficiency by <br>streamlining processes like payroll,<br> performance tracking, and recruitment in<br> one intuitive platform. It reduces <br>administrative burdens, enhances productivity,<br> and allows HR teams to focus on strategic<br> initiatives and employee engagement.</p>
-                        <v-btn class="submit-button-hrms mt-10" @click="submitForm">
-                            <div class="circle-human-text ">
-                                <p class="ml-3">EX</p>
+                        <v-btn class="submit-button-hrms mt-10" @click="submitForm" variant="text">
+                            <div class="circle-human-text " >
+                                <p class="ml-3"  style="color: white">EX</p>
                             </div>
                             <span class="outside-text ml-3">PLORE MORE</span>
                         </v-btn>

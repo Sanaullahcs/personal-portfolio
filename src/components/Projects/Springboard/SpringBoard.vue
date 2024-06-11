@@ -17,9 +17,9 @@
                     <v-col cols="12" md="6" class="projects-content">
     
                         <p class="mt-10 springboard-para">To bridge the gap between academic <br>education and necessary practical <br>experience needed to help land a good IT <br>job in Pakistan, we have taken a novel<br> initiative to help train recent IT graduates in <br>the country. Successful cohorts gain vital <br>practical experience while working directly<br> with highly trained and experienced engineers.</p>
-                        <v-btn class="submit-button-beauty mt-5" @click="submitForm">
+                        <v-btn class="submit-button-beauty mt-5" @click="submitForm" variant="text">
                             <div class="circle-spring-text ">
-                                <p class="ml-3">EX</p>
+                                <p class="ml-3" style="color: white">EX</p>
                             </div>
                             <span class="outside-text ml-3">PLORE MORE</span>
                         </v-btn>

@@ -30,7 +30,7 @@
                 </v-row>
                 <v-row>
                     <v-col cols="12">
-                        <v-btn class="submit-button" @click="submitForm">
+                        <v-btn class="submit-button" @click="submitForm" variant="text">
                             <div class="circle-text">
                                 <p class="ml-3">SU</p>
                             </div>

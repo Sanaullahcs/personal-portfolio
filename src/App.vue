@@ -34,7 +34,7 @@
   @import "@/assets/styles/style.css";
   
   .background-body {
-    background-color: black;
+    background-color: #161616;
   }
   </style>
   

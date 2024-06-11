@@ -16,7 +16,7 @@
                     <p class="about-text ml-10">Personalized service with perfection is our mantra.<br> We go above and beyond to cater to your requirements and deliver <br>products and services that surpass your expectations. We <br>understand that you can go anywhere for your technology<br> needs, what stands us apart is our extensive experience and <br>diversified team that offer a perfect recipe for your success. <br>Psst! We have the secret sauce for your business.</p>
 
                 </v-container>
-                <v-btn v-if="showReadMoreButton" class="submit-button-Read ml-10" @click="toggleButtons">
+                <v-btn v-if="showReadMoreButton" class="submit-button-Read ml-10" @click="toggleButtons" variant="text">
                     <div class="circle-text">
                         <p class="ml-3">RE</p>
                     </div>

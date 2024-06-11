@@ -17,9 +17,9 @@
                 <v-col cols="12" md="6" class="projects-content">
 
                     <p class="mt-8 proctor-para">Proctor8 is the most innovative knowledge <br> testing system, featuring advanced AI-driven <br>proctoring, real-time monitoring, and robust<br> analytics. It ensures exam integrity and<br> provides valuable insights into performance. <br>With a user-friendly interface and seamless <br>integration, Proctor8 sets a new standard in<br> reliable and efficient assessments.</p>
-                    <v-btn class="submit-button-proctor mt-3" @click="submitForm">
+                    <v-btn class="submit-button-proctor mt-3" @click="submitForm" variant="flat">
                         <div class="circle-proctor-text ">
-                            <p class="ml-3">EX</p>
+                            <p class="ml-3" style="color: white">EX</p>
                         </div>
                         <span class="outside-text ml-3">PLORE MORE</span>
                     </v-btn>

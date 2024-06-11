@@ -1,5 +1,5 @@
 <template>
-<v-navigation-drawer color="black" width="100" permanent height="auto" class="tool-bar">
+<v-navigation-drawer color="#161616" width="100" permanent height="auto" class="tool-bar">
     <MouseAnimations/>
 
     <div>
@@ -44,7 +44,7 @@ export default {
 @import "@/assets/styles/style.css";
 
 .background-body {
-    background-color: black;
+    background-color: #161616;
 }
 
 /* .v-navigation-drawer {

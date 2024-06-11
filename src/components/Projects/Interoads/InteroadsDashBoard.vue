@@ -17,9 +17,9 @@
                     <v-col cols="12" md="6" class="projects-content">
     
                         <p class=" hrms-text">Introducing the Interoads Knowledge Testing<br> System, tailored specifically for the DC DMV.<br> Our platform allows for the implementation<br> of multiple tests across various locations,<br> supporting an unlimited range of <br>languages. Through our intuitive dashboards,<br> managing operations and monitoring test<br> results has never been easier.</p>
-                        <v-btn class="submit-button-hrms mt-10" @click="submitForm">
+                        <v-btn class="submit-button-hrms mt-10" @click="submitForm" variant="text">
                             <div class="circle-human-text ">
-                                <p class="ml-3">EX</p>
+                                <p class="ml-3" style="color: white">EX</p>
                             </div>
                             <span class="outside-text ml-3">PLORE MORE</span>
                         </v-btn>

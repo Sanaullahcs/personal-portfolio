@@ -17,9 +17,9 @@
                     <v-col cols="12" md="6" class="projects-content">
     
                         <p class="mt-10 beauty-para">Led by a medical director with expertise in<br> stem cell, PRP, and exosomes,<br> complemented by our founder's extensive<br> background in aesthetics, we redefine <br>beauty and wellness. Our focus revolves<br> around the intricate fusion of scientific<br> advancements and the pursuit of timeless<br> beauty, specializing in anti-aging solutions.</p>
-                        <v-btn class="submit-button-beauty mt-3" @click="submitForm">
+                        <v-btn class="submit-button-beauty mt-3" @click="submitForm" variant="text">
                             <div class="circle-tsob-text ">
-                                <p class="ml-3">EX</p>
+                                <p class="ml-3" style="color: white">EX</p>
                             </div>
                             <span class="outside-text ml-3">PLORE MORE</span>
                         </v-btn>

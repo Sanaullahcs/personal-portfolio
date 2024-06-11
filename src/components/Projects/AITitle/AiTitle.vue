@@ -17,9 +17,9 @@
                 <v-col cols="12" md="6" class="projects-content">
 
                     <p class="mt-3  SafrCare-para">Safrcare is a patient-centric healthcare <br> transportation platform designed to provide <br> non-emergency medical transportation <br> services. Our mission is to deliver affordable, <br> comprehensive, and wheelchair-accessible <br> transportation solutions for medical <br>appointments. With a focus on patient <br>comfort and convenience.</p>
-                    <v-btn class="submit-button-ai mt-10" @click="submitForm">
+                    <v-btn class="submit-button-ai mt-10" @click="submitForm" variant="flat">
                         <div class="circle-ai-title-text ">
-                            <p class="ml-3">EX</p>
+                            <p class="ml-3" style="color: white">EX</p>
                         </div>
                         <span class="outside-text ml-3">PLORE MORE</span>
                     </v-btn>
