@@ -104,8 +104,9 @@ margin-left: 20px;
   color: white;
 }
 .switch-container-projects {
-  position: absolute;
-  left: 25%;
+  position: relative;
+  left: 5%;
+  margin-top: -80%;
 
 }
 .switch-container {

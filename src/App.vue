@@ -3,20 +3,24 @@
       <div>
         <ToolBar v-model:drawerVisible="drawerVisible" />
         <MouseAnimations/>
+        <ToolBarResp v-model:drawerVisible="drawerVisible" />
 
       </div>
       <router-view />
-      <MouseAnimations/>
+
     </v-app>
   </template>
   
   <script>
   import ToolBar from '@/components/MainLayout/ToolBar.vue';
+  import ToolBarResp from '@/components/MainLayout/ToolBarResp.vue';
+
   import MouseAnimations from '@/components/MainLayout/MouseAnimations.vue'
   export default {
     components: {
       ToolBar,
       MouseAnimations,
+      ToolBarResp
     },
     name: 'App',
     data: () => ({

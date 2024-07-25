@@ -16,7 +16,7 @@
 
                         </v-row>
                     </div>
-                    <v-row style="padding-left: 5%; margin-bottom: 5%; width: 100%">
+                    <v-row style=" margin-bottom: 5%; width: 100%">
                         <v-col cols="1">
                             <div class="arrow-btn">
                                 <!-- MDI previous button -->
@@ -28,7 +28,7 @@
                                 </v-btn>
                             </div>
                         </v-col>
-                        <v-col cols="11" lg="11" md="12" sm="12" xs="12">
+                        <v-col cols="11" lg="11" >
 
                             <div>
                                 <Carousel class="reviewCarosel" :breakpoints="carouselBreakpoints" :wrap-around="true" :autoplay="2000" ref="secondCarousel">
@@ -78,15 +78,19 @@ export default {
     data() {
         return {
             carouselBreakpoints: {
-                960: {
-                    itemsToShow: 4
-                },
-                600: {
-                    itemsToShow: 2
-                },
-                0: {
-                    itemsToShow: 1
-                },
+
+                1200: {
+                itemsToShow: 3
+            },
+            960: {
+                itemsToShow: 2
+            },
+            600: {
+                itemsToShow: 1
+            },
+            0: {
+                itemsToShow: 1
+            },
             },
 
             carouselSlides: [{
@@ -279,4 +283,12 @@ export default {
 .arrow-btn {
     position: absolute;
 }
+</style>
+<style>
+
+.arrow-btn{
+    position: absolute;
+    margin-top: 330px;
+}
+
 </style>

@@ -9,9 +9,6 @@
                     <VisionToExcellence />
                 </div>
                 <div class="card">
-                    <ContactUs />
-                </div>
-                <div class="card">
                     <AboutPage />
                 </div>
                 <div class="card">
@@ -83,9 +80,18 @@
                 <div class="card">
                     <AiTitle />
                 </div>
+                <div class="card">
+                    <ContactUs />
+                </div>
+
             </div>
+
+          
         </v-col>
     </v-row>
+    <div class="card responsive-cards">
+                <AgeWiserResp />
+            </div>
 </v-container>
 </template>
 
@@ -122,6 +128,7 @@ import ChronosWebsite from "@/components/Projects/Chronos/ChronosWebsite.vue"
 import ChronosDashboard from "@/components/Projects/Chronos/ChronosDashboard.vue"
 import ChronosApp from "@/components/Projects/Chronos/ChronosApp.vue"
 import AiTitle from "@/components/Projects/AITitle/AiTitle.vue"
+import AgeWiserResp from "@/components/ResComp/AgeWiserResp.vue"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,6 +160,7 @@ export default {
         ChronosDashboard,
         ChronosApp,
         AiTitle,
+        AgeWiserResp
     },
     data() {
         return {
@@ -168,7 +176,6 @@ export default {
             const scrollingWrapper = this.$refs.scrollingWrapper;
             const sections = scrollingWrapper.children;
 
-            // Clean up existing ScrollTrigger instances
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             gsap.set(sections, {
                 clearProps: "all"
@@ -196,7 +203,7 @@ export default {
             // Get the element containing agewiserWebsite
             const scrollingWrapper = this.$refs.scrollingWrapper;
             if (scrollingWrapper) {
-                const agewiserWebsiteCard = scrollingWrapper.querySelector('.card:nth-child(5)'); // Adjust the index if needed
+                const agewiserWebsiteCard = scrollingWrapper.querySelector('.card:nth-child(5)');
                 console.log('agewiserWebsiteCard', agewiserWebsiteCard)
                 // Scroll to the element
                 if (agewiserWebsiteCard) {
@@ -210,7 +217,7 @@ export default {
         },
     },
     mounted() {
-      
+
         console.log('this.$vuetify.breakpoint', this.$vuetify.breakpoint);
 
         this.emitter.on('scroll-to-websites', () => {
@@ -219,34 +226,37 @@ export default {
 
             if (section) {
                 const container = document.querySelector('.scrolling-wrapper');
-
-                if (this.$vuetify.breakpoint && this.$vuetify.breakpoint.name) {
-                    // Switch based on the breakpoint name
-                    switch (this.$vuetify.breakpoint.name) {
-                        case 'xl':
-                        case 'lg':
-                            container.scrollTo({
-                                left: section.offsetLeft,
-                                behavior: 'smooth'
-                            });
-                            break;
-                        case 'md':
-                        case 'sm':
-                        case 'xs':
-                            section.scrollIntoView({
-                                behavior: 'smooth'
-                            });
-                            break;
-                        default:
-                            section.scrollIntoView({
-                                behavior: 'smooth'
-                            });
-                    }
-                } else {
-                    section.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
+                console.log('section', section.offsetLeft)
+                container.scrollTo({
+                    left: section.offsetLeft,
+                    behavior: 'smooth'
+                });
+                // if (this.$vuetify.breakpoint && this.$vuetify.breakpoint.name) {
+                //     switch (this.$vuetify.breakpoint.name) {
+                //         case 'xl':
+                //         case 'lg':
+                //             container.scrollTo({
+                //                 left: section.offsetLeft,
+                //                 behavior: 'smooth'
+                //             });
+                //             break;
+                //         case 'md':
+                //         case 'sm':
+                //         case 'xs':
+                //             section.scrollIntoView({
+                //                 behavior: 'smooth'
+                //             });
+                //             break;
+                //         default:
+                //             section.scrollIntoView({
+                //                 behavior: 'smooth'
+                //             });
+                //     }
+                // } else {
+                //     section.scrollIntoView({
+                //         behavior: 'smooth'
+                //     });
+                // }
             }
         });
 
@@ -307,6 +317,45 @@ body,
     .scrolling-wrapper .card {
         flex: 0 0 auto;
         width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    /* Show only specific cards */
+    .scrolling-wrapper .card:nth-child(4),
+    .scrolling-wrapper .card:nth-child(5),
+    .scrolling-wrapper .card:nth-child(6),
+    .scrolling-wrapper .card:nth-child(7),
+    .scrolling-wrapper .card:nth-child(8),
+    .scrolling-wrapper .card:nth-child(9),
+    .scrolling-wrapper .card:nth-child(10),
+    .scrolling-wrapper .card:nth-child(11),
+    .scrolling-wrapper .card:nth-child(12),
+    .scrolling-wrapper .card:nth-child(13),
+    .scrolling-wrapper .card:nth-child(14),
+    .scrolling-wrapper .card:nth-child(15),
+    .scrolling-wrapper .card:nth-child(16),
+    .scrolling-wrapper .card:nth-child(17),
+    .scrolling-wrapper .card:nth-child(18),
+    .scrolling-wrapper .card:nth-child(19),
+    .scrolling-wrapper .card:nth-child(20),
+    .scrolling-wrapper .card:nth-child(21),
+    .scrolling-wrapper .card:nth-child(22),
+    .scrolling-wrapper .card:nth-child(23),
+    .scrolling-wrapper .card:nth-child(24),
+    .scrolling-wrapper .card:nth-child(25),
+    .scrolling-wrapper .card:nth-child(26),
+    .scrolling-wrapper .card:nth-child(27) {
+        display: none;
+        /* Display specific cards */
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .responsive-cards {
+        display: none;
     }
 }
 </style>

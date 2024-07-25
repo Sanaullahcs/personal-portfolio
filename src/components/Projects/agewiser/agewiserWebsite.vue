@@ -2,7 +2,7 @@
 <div class="contact-page mt-16">
     <v-container>
         <v-row>
-            <v-col cols="12 margin-top-responsiveness" >
+            <v-col cols="12 margin-top-responsiveness">
                 <p class="ageWiser-text ml-16">AgeWiser</p>
 
             </v-col>
@@ -11,7 +11,7 @@
             <v-row>
                 <v-col cols="12" md="6">
                     <div class="responsive-image-ageWiser">
-                        <v-img src="@/assets/images/AgewiserWebsite.png" max-height="450"  class="responsive-ageWise"></v-img>
+                        <v-img src="@/assets/images/AgewiserWebsite.png" max-height="450" class="responsive-ageWise"></v-img>
                     </div>
                 </v-col>
                 <v-col cols="12" md="6" class="projects-content">

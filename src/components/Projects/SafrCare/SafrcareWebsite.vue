@@ -2,9 +2,19 @@
 <div class="contact-page mt-16">
     <v-container>
         <v-row>
-            <v-col cols="12">
+            <v-col cols="6">
                 <p class="safrCare-text ml-16">SafrCare</p>
 
+            </v-col>
+            <v-col cols="6" class="d-flex justify-end" v-if="$route.path == '/'">
+                <v-btn class="mt-8 back-btn" variant="flat" @click="backToFirst">
+                    <div class="d-flex align-center">
+                        <div class="icon-container">
+                            <v-icon color="white">mdi-chevron-left</v-icon>
+                        </div>
+                        <p class="back-project button ml-4">Back to 1st project</p>
+                    </div>
+                </v-btn>
             </v-col>
         </v-row>
         <div class="ageWiser-cover">
@@ -63,6 +73,10 @@ export default {
         toggle() {
             this.isOn = !this.isOn;
         },
+        backToFirst(){
+            console.log('scroll-to')
+            this.emitter.emit('scroll-to-websites')
+        }
     },
 };
 </script>

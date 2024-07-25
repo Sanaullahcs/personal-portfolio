@@ -101,7 +101,75 @@ const routes = [
   { 
     path: '/about',
     name: 'about',
-    component: () => import('@/components/AboutPages/AboutPage.vue')
+    component: () => import('@/views/AboutPageView.vue')
+  },
+  { 
+    path: '/practice',
+    name: 'practice',
+    component: () => import('@/components/PracticeComp.vue')
+  },
+
+  { 
+    path: '/AgeWiser',
+    name: 'AgeWiser',
+    component: () => import('@/views/AgeWiserView.vue')
+  },
+  { 
+    path: '/SpringBoard',
+    name: 'SpringBoard',
+    component: () => import('@/components/Projects/Springboard/SpringBoard.vue')
+  },
+  { 
+    path: '/ai-title',
+    name: 'AiTitle',
+    component: () => import('@/components/Projects/AITitle/AiTitle.vue')
+  },
+  { 
+    path: '/Safr-care',
+    name: 'SafrCare',
+    component: () => import('@/views/SafrCareView.vue')
+  },
+  { 
+    path: '/NinjaHR',
+    name: 'NinjaHR',
+    component: () => import('@/views/NinjaHRView.vue')
+  },
+  { 
+    path: '/Interoads',
+    name: 'Interoads',
+    component: () => import('@/views/InteroadsView.vue')
+  },
+  { 
+    path: '/NextGrade',
+    name: 'NextGrade',
+    component: () => import('@/views/NextGradeView.vue')
+  },
+  { 
+    path: '/Proctor8',
+    name: 'Proctor',
+    component: () => import('@/components/Projects/Proctor8/proctor.vue')
+  },
+  { 
+    path: '/CareerVi',
+    name: 'CareerVi',
+    component: () => import('@/components/Projects/CareerVi/CareerVi.vue')
+  },
+
+  { 
+    path: '/Chronos',
+    name: 'Chronos',
+    component: () => import('@/views/ChronosView.vue')
+  },
+
+  { 
+    path: '/Tsob',
+    name: 'Tsob',
+    component: () => import('@/components/Projects/TSOB/TSOB.vue')
+  },
+  { 
+    path: '/animations',
+    name: 'animations',
+    component: () => import('@/components/animationsCmp.vue')
   }
 ];
 
